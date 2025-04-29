@@ -1,5 +1,6 @@
 const { sum, subtract, multiply, divide } = require('./math.js');
 
+
 test('add 2 and 5 to make 7', () => {
     expect(sum(2, 5)).toBe(7);
 });
@@ -19,4 +20,3 @@ test('divide 10 by 2 to make 5', () => {
 test('division by zero throws an error', () => {
     expect(() => divide(10, 0)).toThrow('Division by zero is not allowed');
 });
-

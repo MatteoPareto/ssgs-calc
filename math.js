@@ -1,14 +1,33 @@
+// Define operations 
+function sum(a, b) {
+    return parseFloat(a) + parseFloat(b);
+}
+
+function subtract(a, b) {
+    return parseFloat(a) - parseFloat(b);
+}
+
+function multiply(a, b) {
+    return parseFloat(a) * parseFloat(b);
+}
+
+function divide(a, b) {
+    if (parseFloat(b) === 0) {
+        throw new Error('Division by zero is not allowed');
+    }
+    return parseFloat(a) / parseFloat(b);
+}
+
+// Export the operations for testing
+module.exports = { sum, subtract, multiply, divide };
+
+// CLI logic
 let operations = ['Addition', 'Subtraction', 'Multiplication', 'Division'];
 
 let step = 0;
 let operation = '';
 let firstNumber = '';
 let secondNumber = '';
-
-function sum(a, b) {
-    return parseFloat(a) + parseFloat(b);
-}
-module.exports = sum;
 
 process.stdout.write('Hello User! \n\nPlease choose an operation via a specific number: \n 0) Addition \n 1) Subtraction \n 2) Multiplication \n 3) Division \n\n');
 
@@ -32,7 +51,7 @@ process.stdin.on('data', (data) => {
         secondNumber = input;
         console.log('Second number: ' + secondNumber);
 
-        let result = 0; // Declare result here
+        let result = 0;
 
         switch (operation) {
             case '0':
@@ -40,19 +59,19 @@ process.stdin.on('data', (data) => {
                 console.log('Result: ' + result);
                 break;
             case '1':
-                result = parseFloat(firstNumber) - parseFloat(secondNumber);
+                result = subtract(firstNumber, secondNumber);
                 console.log('Result: ' + result);
                 break;
             case '2':
-                result = parseFloat(firstNumber) * parseFloat(secondNumber);
+                result = multiply(firstNumber, secondNumber);
                 console.log('Result: ' + result);
                 break;
             case '3':
-                if (parseFloat(secondNumber) !== 0) {
-                    result = parseFloat(firstNumber) / parseFloat(secondNumber);
+                try {
+                    result = divide(firstNumber, secondNumber);
                     console.log('Result: ' + result);
-                } else {
-                    console.log('Error: Division by zero is not allowed. Enter the first number again: ');
+                } catch (error) {
+                    console.log(error.message);
                     step--; // Go back to step 2 to re-enter the second number
                 }
                 break;
