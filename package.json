@@ -1,15 +1,19 @@
 {
-  "name": "ssgs-projects",
+  "name": "ssgs-calc",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "calcolatrice con operazioni base di somma, sottrazione, moltiplicazione e divisione",
+  "main": "math.js",
   "scripts": {
+    "start": "node math.js",
     "test": "jest --coverage"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["calculator", "math", "operations"],
+  "author": "Matteo Pareto",
   "license": "ISC",
   "devDependencies": {
     "jest": "^29.7.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
   }
 }
