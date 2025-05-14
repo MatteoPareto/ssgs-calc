@@ -14,7 +14,7 @@ test('multiply 2 and 5 to make 10', () => {
 });
 
 test('divide 10 by 2 to make 5', () => {
-    expect(divide(10, 2)).toBe(6);
+    expect(divide(10, 2)).toBe(5);
 });
 
 test('division by zero throws an error', () => {
