@@ -20,6 +20,12 @@
    ```bash
    npm install
    ```
+## Avvio della CLI Interattiva
+
+Per avviare la calcolatrice in modalità interattiva da terminale, esegui il comando:
+
+```bash
+npm start
 
 ## Istruzioni per i test
 Per eseguire i test unitari:

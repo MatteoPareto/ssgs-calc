@@ -2,18 +2,26 @@
   "name": "ssgs-calc",
   "version": "1.0.0",
   "description": "calcolatrice con operazioni base di somma, sottrazione, moltiplicazione e divisione",
-  "main": "math.js",
+  "main": "src/math.js",
   "scripts": {
-    "start": "node math.js",
+    "start": "node src/math.js",
     "test": "jest --coverage"
   },
   "keywords": ["calculator", "math", "operations"],
   "author": "Matteo Pareto",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/matteopareto/ssgs-calc.git"
+  },
+  "bugs": {
+    "url": "https://github.com/matteopareto/ssgs-calc/issues"
+  },
+  "homepage": "https://github.com/matteopareto/ssgs-calc#readme",
   "devDependencies": {
     "jest": "^29.7.0"
   },
   "engines": {
-    "node": ">=16.0.0"
+    "node": ">=20.0.0"
   }
 }
