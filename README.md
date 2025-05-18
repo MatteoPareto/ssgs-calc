@@ -26,7 +26,7 @@ Per avviare la calcolatrice in modalità interattiva da terminale, esegui il com
 
 ```bash
 npm start
-
+```
 ## Istruzioni per i test
 Per eseguire i test unitari:
 ```bash
